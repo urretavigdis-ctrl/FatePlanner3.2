@@ -264,7 +264,7 @@ const ProbabilityVisual = () => (
                 <rect x="45" y="45" width="10" height="10" fill="#C19A6B" fillOpacity="0.2" className="animate-pulse" />
             </svg>
             <div className="absolute top-0 right-0 font-mono text-[8px] text-zen-accent bg-zen-accent/10 px-1 rounded">
-                P(x) > 95%
+                P(x) &gt; 95%
             </div>
         </div>
     </div>
