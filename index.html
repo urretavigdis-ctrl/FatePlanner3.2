@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FatePlanner - Pattern Recognition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              zen: {
+                bg: '#EAE6DD',
+                text: '#2D2D2D',
+                accent: '#C19A6B',
+                subtle: '#E5E5E5',
+                risk: '#C56E61'
+              },
+              element: {
+                wood: '#76A07B',
+                fire: '#C56E61',
+                earth: '#B59B6D',
+                metal: '#9AA0A6',
+                water: '#6B8BA4'
+              }
+            },
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'serif'],
+              sans: ['"Inter"', '"Noto Sans SC"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            animation: {
+              'spin-slow': 'spin 60s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'flash': 'flash 0.5s ease-out forwards',
+              'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'scan': 'scan 3s linear infinite',
+              'slam': 'slam 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+              'rays': 'spin 20s linear infinite',
+              'text-explode': 'textExplode 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards',
+              'scroll': 'scroll 40s linear infinite',
+              'scroll-reverse': 'scrollReverse 40s linear infinite',
+              'scroll-y': 'scrollY 30s linear infinite',
+              'scroll-y-reverse': 'scrollYReverse 35s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              flash: {
+                '0%': { opacity: '0' },
+                '50%': { opacity: '1', backgroundColor: 'rgba(255, 255, 255, 1)' },
+                '100%': { opacity: '0' },
+              },
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+              },
+              scan: {
+                '0%': { top: '-10%', opacity: '0' },
+                '10%': { opacity: '1' },
+                '90%': { opacity: '1' },
+                '100%': { top: '110%', opacity: '0' }
+              },
+              'grid-move': {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '0 40px' }
+              },
+              slam: {
+                '0%': { opacity: '0', transform: 'scale(3)' },
+                '100%': { opacity: '1', transform: 'scale(1)' }
+              },
+              textExplode: {
+                '0%': { letterSpacing: '-0.5em', opacity: '0', filter: 'blur(10px)' },
+                '100%': { letterSpacing: '0.1em', opacity: '1', filter: 'blur(0px)' }
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' }
+              },
+              scrollReverse: {
+                 '0%': { transform: 'translateX(-50%)' },
+                 '100%': { transform: 'translateX(0)' }
+              },
+              scrollY: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' }
+              },
+              scrollYReverse: {
+                '0%': { transform: 'translateY(-50%)' },
+                '100%': { transform: 'translateY(0)' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #EAE6DD;
+        color: #2D2D2D;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      html.dark body {
+        background-color: #050B14;
+        color: #E5E5E5;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .dark .glass-card {
+        background: rgba(10, 10, 15, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      /* Dot Grid Background */
+      .bg-dot-grid {
+        background-image: radial-gradient(#C19A6B 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      
+      /* Perspective Grid for Calculation Theater */
+      .perspective-grid {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, rgba(193, 154, 107, 0.15) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(193, 154, 107, 0.15) 1px, transparent 1px);
+        transform: perspective(500px) rotateX(60deg);
+        transform-origin: 50% 100%;
+        animation: grid-move 2s linear infinite;
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 200%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      /* God Rays */
+      .god-rays {
+        background: repeating-conic-gradient(
+          from 0deg, 
+          rgba(193, 154, 107, 0.1) 0deg 10deg, 
+          transparent 10deg 20deg
+        );
+        mask-image: radial-gradient(circle, black 0%, transparent 70%);
+        -webkit-mask-image: radial-gradient(circle, black 0%, transparent 70%);
+      }
+
+      /* Scrollbar hiding for scroll wheel */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Custom utility for path drawing animation */
+      .draw-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        transition: stroke-dashoffset 2s ease-out;
+      }
+      .draw-path.active {
+        stroke-dashoffset: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
