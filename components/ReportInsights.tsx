@@ -12,73 +12,73 @@ interface ReportInsightsProps {
 const INSIGHTS = [
   {
     id: 'TAISUI',
-    title: '太岁关系分析 (Tai Sui)',
+    title: 'Tai Sui Relationship Analysis',
     icon: <ShieldAlert className="w-5 h-5" />,
-    hook: "2026 丙午年，真正的风险来自地支与流年的‘刑、冲、破、害’。你的 PDF 将精准计算你与太岁的真实关系。",
-    lockedText: "根据精密排盘，本命地支与流年午火形成【自刑】格局。这不仅仅是犯太岁，更意味着自我内耗。建议立春后佩戴金属饰品以泄火气，同时避免向南发展..."
+    hook: "In 2026 Bing Wu Year, the real risk comes from the 'Punishment, Clash, Break, and Harm' of the earthly branches. Your PDF will accurately calculate your real relationship with Tai Sui.",
+    lockedText: "Based on the precise chart, your earthly branch forms a [Self-Punishment] pattern with the annual Wu Fire. This means more than just offending Tai Sui; it signifies internal friction. It is recommended to wear metal accessories after the Start of Spring to drain the Fire energy, and avoid developing towards the South..."
   },
   {
     id: 'YEAR_TUNE',
-    title: '流年定调 (Year Theme)',
+    title: 'Annual Theme Definition',
     icon: <Flame className="w-5 h-5" />,
-    hook: "2026 火旺之年，这把火是炼出真金还是烧干资源？先看懂你的年度关键词。",
-    lockedText: "年度核心关键词：【淬炼】。丙午大火对于你的日柱而言是七杀攻身。这代表巨大的压力，也代表爆发性的机会。唯有极强的自律（印星化杀）才能接住这波能量..."
+    hook: "In a year of raging Fire, will this flame refine you into gold or burn up your resources? Understand your keyword first.",
+    lockedText: "Core Annual Keyword: [Refinement]. The Bing Wu Fire acts as the 'Seven Killings' attacking your Day Master. This represents immense pressure, but also explosive opportunity. Only extreme self-discipline (Seal element transformation) can handle this energy..."
   },
   {
     id: 'CAREER',
-    title: '事业晋升时机 (Career Timing)',
+    title: 'Career Promotion Timing',
     icon: <Briefcase className="w-5 h-5" />,
-    hook: "哪个月份官印能量最强？哪个月份比劫重重容易背锅？不要猜，看数据。",
-    lockedText: "战略窗口期：农历四月（巳月）至六月（未月）。这三个月火土相生，官印护身，利于向上管理和职位争取。警惕农历十一月（子月），水火相冲，易有口舌..."
+    hook: "Which month has the strongest Authority energy? Which month is prone to betrayal by peers? Don't guess, look at the data.",
+    lockedText: "Strategic Window: Lunar April (Si) to June (Wei). During these three months, Fire and Earth generate each other, protecting you with Authority and Seal, favoring upward management and position striving. Beware of Lunar November (Zi), where Water clashes with Fire, causing potential disputes..."
   },
   {
     id: 'WEALTH_STRUC',
-    title: '正偏财收益结构 (Wealth Structure)',
+    title: 'Wealth Income Structure',
     icon: <TrendingUp className="w-5 h-5" />,
-    hook: "你命里适合赚工资（正财）还是搞副业（偏财）？搞清楚财富结构，再决定钱往哪里投。",
-    lockedText: "财富象限分析：正财稳健但增长受限，偏财星在长生位。2026年你的财富增量80%将来自副业或投资收益。建议保留主业现金流，大胆尝试轻资产副业..."
+    hook: "Are you destined for a salary (Direct Wealth) or a side hustle (Indirect Wealth)? Clarify your wealth structure before investing.",
+    lockedText: "Wealth Quadrant Analysis: Direct Wealth is stable but growth-limited. Indirect Wealth star is in the 'Growth' phase. 80% of your wealth increase in 2026 will come from side hustles or investment returns. It is recommended to keep your main job's cash flow while boldly trying asset-light side projects..."
   },
   {
     id: 'WEALTH_RISK',
-    title: '财富风险预警 (Wealth Risk)',
+    title: 'Wealth Risk Warning',
     icon: <Users className="w-5 h-5" />,
-    hook: "2026 最大财务漏洞可能来自‘熟人’。流年遇劫财，借贷担保可能是有去无回。",
-    lockedText: "红色警报：比劫夺财。今年最忌讳合伙做生意或借钱给朋友。如果不设防，可能会在年中遭遇‘杀熟’。由于午火过旺，合同文书务必经过专业律师审核..."
+    hook: "Your biggest financial loophole in 2026 may come from 'acquaintances'. With Rob Wealth in the annual chart, lending is risky.",
+    lockedText: "Red Alert: Rob Wealth snatching money. This year, partnerships or lending money to friends is strictly taboo. Without defense, you may encounter 'betrayal by familiarity' mid-year. Due to excessive Wu Fire, ensure all contracts are reviewed by professional lawyers..."
   },
   {
     id: 'LOVE_STRAT',
-    title: '感情状态深度策略 (Love Strategy)',
+    title: 'Deep Love Strategy',
     icon: <Heart className="w-5 h-5" />,
-    hook: "桃花是在‘相亲局’还是‘职场’？不管脱单还是防渣，你需要定制剧本。",
-    lockedText: "缘分雷达：你的正缘星藏于印库之中。这意味着另一半极可能通过长辈介绍或在学习场所（图书馆、研讨会）相遇。对方带有明显的‘师长’气质..."
+    hook: "Is romance in a 'blind date' or at the 'workplace'? Whether single or protecting a relationship, you need a custom script.",
+    lockedText: "Romance Radar: Your True Love star is hidden in the Seal storage. This means your partner is likely to be introduced by elders or met in learning environments (libraries, seminars). They will have a distinct 'mentor' quality..."
   },
   {
     id: 'PEACH_WINDOW',
-    title: '桃花窗口期锁定 (Romance Window)',
+    title: 'Romance Window Lock-in',
     icon: <Clock className="w-5 h-5" />,
-    hook: "不要在烂桃花月份浪费时间。报告锁定了 2026 红鸾与桃花星动的具体月份。",
-    lockedText: "高频共振月：农历八月（酉月）。天喜星入命，这不仅是恋爱的季节，更是确立关系的黄金期。避开农历二月，该月桃花带煞，容易陷入三角关系..."
+    hook: "Don't waste time in bad romance months. The report locks in specific months for Red Matchmaker and Peach Blossom stars in 2026.",
+    lockedText: "High Frequency Resonance: Lunar August (You). The Sky Happiness star enters your life. This is not just a season for love, but a golden period for establishing relationships. Avoid Lunar February, as the Peach Blossom carries a curse, easily leading to love triangles..."
   },
   {
     id: 'HEALTH',
-    title: '五行健康求救信号 (Health Signal)',
+    title: 'Elemental Health Signal',
     icon: <Activity className="w-5 h-5" />,
-    hook: "焦虑失眠不是偶然，是五行失衡。火旺之年，哪个器官会先罢工？",
-    lockedText: "健康扫描：火炎土燥。重点关注心脑血管系统和小肠功能。精神层面容易出现‘心火’导致的严重失眠。建议多摄入黑色食物（属水）进行调候..."
+    hook: "Anxiety and insomnia are not accidental, but elemental imbalance. In a Fire year, which organ will strike first?",
+    lockedText: "Health Scan: Blazing Fire and Dry Earth. Focus on the cardiovascular system and small intestine function. Mentally, you are prone to severe insomnia caused by 'Heart Fire'. It is recommended to consume more black foods (Water element) to regulate the climate..."
   },
   {
     id: 'FENGSHUI',
-    title: '九宫风水避险布局 (Feng Shui)',
+    title: 'Feng Shui Risk Layout',
     icon: <Compass className="w-5 h-5" />,
-    hook: "警告：正南方是绝对禁区。教你用简单物品化解煞气，催旺财位。",
-    lockedText: "空间风水：正南方飞入五黄廉贞星（大煞）。该方位切忌动土、装修或摆放红色物品。化解方案：放置一尊铜葫芦或六枚乾隆铜钱以泄土气..."
+    hook: "Warning: The South is a forbidden zone. Learn to use simple items to neutralize negative energy and boost wealth.",
+    lockedText: "Spatial Feng Shui: The Five Yellow Star (Disaster Star) flies to the South. Avoid construction, renovation, or placing red items in this sector. Remedy: Place a copper gourd or six Qianlong coins to drain the Earth energy..."
   },
   {
     id: 'MONTHLY',
-    title: '12个月战术指南 (Monthly Guide)',
+    title: '12-Month Tactical Guide',
     icon: <Calendar className="w-5 h-5" />,
-    hook: "年度运势太笼统？这份报告将 2026 拆解为 12 个具体的行动指南。",
-    lockedText: "正月：潜龙勿用，宜规划；二月：见龙在田，利拜访；三月：情绪波动，忌决策... 每一个流月的能量起伏都为你标注了明确的行动信号..."
+    hook: "Annual fortune is too general? This report breaks down 2026 into 12 specific action guides.",
+    lockedText: "1st Month: Hidden Dragon, plan ahead; 2nd Month: Dragon in the field, good for visits; 3rd Month: Emotional volatility, avoid decisions... Every lunar month's energy fluctuation marks a clear action signal for you..."
   },
 ];
 
@@ -154,7 +154,7 @@ const ReportInsights: React.FC<ReportInsightsProps> = ({ onUnlock }) => {
                                 {/* Blurred Content */}
                                 <div className="mt-2 text-sm font-serif text-zen-text/60 blur-[6px] select-none leading-loose text-justify">
                                     {item.lockedText}
-                                    <span className="opacity-50"> 这是由于流年天干透出丙火，导致你的命盘结构发生质变。如果不及时调整策略，可能会错失良机...</span>
+                                    <span className="opacity-50"> This is because the annual stem reveals Bing Fire, causing a qualitative change in your chart structure. Without timely strategy adjustment, opportunities may be missed...</span>
                                 </div>
 
                                 {/* CTA Button Overlay */}
@@ -165,7 +165,7 @@ const ReportInsights: React.FC<ReportInsightsProps> = ({ onUnlock }) => {
                                     >
                                         <Lock className="w-4 h-4" />
                                         <span className="font-serif font-bold italic text-base md:text-lg tracking-wide">
-                                            解锁完整报告
+                                            Unlock Full Report
                                         </span>
                                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                                     </button>

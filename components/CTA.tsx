@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Database, Activity, Lock } from 'lucide-react';
 
 interface CTAProps {
@@ -11,15 +11,16 @@ const CTA: React.FC<CTAProps> = ({ onStart }) => {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <button 
           onClick={onStart}
+          id="primary-cta"
           className="group relative inline-flex items-center justify-center gap-3 px-8 py-5 bg-zen-text text-white rounded-lg hover:bg-zen-accent transition-all duration-300 shadow-lg hover:shadow-zen-accent/30 hover:-translate-y-1"
         >
           <span className="font-sans font-medium text-lg tracking-wide">
-            [ 解锁你的专属2026完整策略 ]
+            [ Unlock Your Exclusive 2026 Strategy ]
           </span>
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
         <p className="mt-6 text-sm font-serif italic text-zen-text/60 mb-12">
-          "知命，是为了更好地改命。"
+          "Knowing destiny is to better rewrite it."
         </p>
 
         {/* Trust / Credibility Bar - Moved from Hero */}

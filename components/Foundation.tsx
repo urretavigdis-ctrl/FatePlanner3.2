@@ -32,10 +32,10 @@ const PILLAR_DATA = {
     { char: '子', element: 'Water' }
   ],
   hidden: ['乙丁己', '戊庚壬', '辛丁戊', '癸'],
-  nanyin: ['路旁土', '山下火', '平地木', '桑柘木'],
-  phase: ['衰', '病', '墓', '绝'], // Star Luck
-  kongwang: ['', '', '辰巳', ''],
-  shensha: ['太极', '驿马', '华盖', '桃花']
+  nanyin: ['Earth', 'Fire', 'Wood', 'Wood'],
+  phase: ['Decline', 'Sick', 'Grave', 'Extinct'], // Star Luck
+  kongwang: ['', '', 'Chen Si', ''],
+  shensha: ['Taiji', 'Horse', 'Art', 'Peach']
 };
 
 const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => {
@@ -104,8 +104,8 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
             isOpen={openSection === 0} 
             onToggle={() => toggleSection(0)}
             icon={<Grid3X3 className="w-5 h-5" />}
-            title="基础八字排盘"
-            subtitle="THE PILLAR MATRIX"
+            title="THE PILLAR MATRIX"
+            subtitle="BAZI CHART"
         >
             <div className="overflow-x-auto pb-2">
                 <div className="min-w-[300px] grid grid-cols-5 text-center font-serif text-sm border border-zen-accent/10 rounded-lg overflow-hidden bg-white/50">
@@ -154,14 +154,14 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
             isOpen={openSection === 1} 
             onToggle={() => toggleSection(1)}
             icon={<Layout className="w-5 h-5" />}
-            title="格局与隐藏潜力"
-            subtitle="STRUCTURE & TALENT"
+            title="STRUCTURE & TALENT"
+            subtitle="HIDDEN POTENTIAL"
         >
             <div className="space-y-4">
                 <div className="flex justify-between items-center bg-white border border-zen-accent/20 p-4 rounded-xl shadow-sm">
                     <div>
                         <span className="text-xs font-mono text-zen-text/40 uppercase block mb-1">Primary Structure</span>
-                        <h3 className="text-2xl font-serif font-bold text-zen-text">建禄格</h3>
+                        <h3 className="text-2xl font-serif font-bold text-zen-text">Thriving Structure</h3>
                     </div>
                     <button className="p-2 rounded-full bg-zen-accent/10 text-zen-accent hover:bg-zen-accent hover:text-white transition-colors">
                         <Sparkles className="w-5 h-5" />
@@ -169,7 +169,7 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
-                    {['炎上格', '木火通明', '伤官生财', '正官佩印'].map(tag => (
+                    {['Flaming Structure', 'Wood-Fire Brilliance', 'Wealth Generation', 'Authority & Seal'].map(tag => (
                         <span key={tag} className="px-3 py-1 bg-zen-text/5 text-zen-text/70 rounded-full text-xs font-serif border border-transparent hover:border-zen-accent/30 transition-colors">
                             {tag}
                         </span>
@@ -178,7 +178,7 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
 
                 <div className="bg-zen-text/5 p-4 rounded-lg border-l-2 border-zen-accent">
                     <p className="text-sm text-zen-text/80 leading-relaxed font-sans">
-                        <span className="font-bold">AI Insight:</span> 你的命盘显示出极强的资源整合能力。建禄格意味着你适合在成熟的体系中掌权，而非从零创业。2026年你的核心课题是将“名声”转化为“实利”。
+                        <span className="font-bold">AI Insight:</span> Your chart shows strong resource integration capabilities. The 'Thriving Structure' means you are suited to wield power within mature systems, rather than starting from zero. Your core task in 2026 is to convert 'Reputation' into 'Tangible Assets'.
                     </p>
                 </div>
             </div>
@@ -189,8 +189,8 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
             isOpen={openSection === 2} 
             onToggle={() => toggleSection(2)}
             icon={<Activity className="w-5 h-5" />}
-            title="五行分布与流通"
-            subtitle="ELEMENTAL AUDIT"
+            title="ELEMENTAL AUDIT"
+            subtitle="DISTRIBUTION & FLOW"
         >
             <div className="space-y-6 pt-2">
                 <div className="flex items-end justify-between h-32 px-2 gap-2">
@@ -227,8 +227,8 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
             isOpen={openSection === 3} 
             onToggle={() => toggleSection(3)}
             icon={<Binary className="w-5 h-5" />}
-            title="命盘的核心：阴阳"
-            subtitle="YIN-YANG BALANCE"
+            title="YIN-YANG BALANCE"
+            subtitle="CORE OF THE CHART"
         >
             <div className="flex items-center gap-6 py-2">
                 <div className="relative w-24 h-24 flex-shrink-0">
@@ -246,7 +246,7 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
                 <div className="space-y-2">
                     <h4 className="font-serif font-bold text-zen-text">Balanced, leaning Yang.</h4>
                     <p className="text-xs text-zen-text/70 leading-relaxed">
-                        你的性格呈现出“外热内冷”的特质。在公共场合（Yang）表现积极主动，但回归私人空间（Yin）时极度需要独处来恢复能量。
+                        Your personality shows "Cold inside, Hot outside" traits. You are active in public (Yang) but desperately need solitude to recharge in private (Yin).
                     </p>
                 </div>
             </div>
@@ -257,8 +257,8 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
             isOpen={openSection === 4} 
             onToggle={() => toggleSection(4)}
             icon={<Star className="w-5 h-5" />}
-            title="深层自我：生肖原型"
-            subtitle="ZODIAC ARCHETYPE"
+            title="ZODIAC ARCHETYPE"
+            subtitle="DEEP SELF"
         >
             <div className="grid grid-cols-2 gap-3">
                 {[

@@ -42,6 +42,7 @@ declare global {
       footer: any;
       main: any;
       nav: any;
+      code: any;
       
       // SVG Elements
       svg: any;
@@ -53,6 +54,7 @@ declare global {
       stop: any;
       rect: any;
       polyline: any;
+      text: any;
     }
   }
 }
@@ -297,16 +299,26 @@ const LogicShift: React.FC = () => {
         <div className="absolute inset-0 bg-dot-grid opacity-30 pointer-events-none" />
 
         {/* 1. Hero Statement */}
-        <div className={`relative z-10 text-center mb-12 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-4xl md:text-6xl font-serif font-black italic text-zen-text mb-4 tracking-tight">
-                这不是魔法，这是 <span className="relative inline-block">
-                    模式识别
-                    <span className="absolute bottom-1 left-0 w-full h-3 bg-zen-accent/20 -z-10" />
+        <div className={`relative z-10 text-center mb-16 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="font-serif flex flex-col items-center">
+                {/* Line 1 */}
+                <span className="text-2xl md:text-4xl italic text-zen-text/40 font-medium tracking-wide mb-1 md:mb-2">
+                    It's Not Magic,
                 </span>
+                
+                {/* Line 2 */}
+                <div className="flex items-baseline gap-2 md:gap-4 flex-wrap justify-center">
+                    {/* "It's" - Matches Line 1 style as requested */}
+                    <span className="text-2xl md:text-4xl italic text-zen-text/40 font-medium tracking-wide">
+                        It's
+                    </span>
+                    {/* "Pattern Recognition" - Highlighted */}
+                    <span className="text-4xl md:text-6xl lg:text-7xl font-bold italic tracking-tighter text-zen-accent relative">
+                        Pattern Recognition
+                        <span className="absolute bottom-1 md:bottom-2 left-0 w-full h-3 bg-zen-accent/10 -z-10 skew-x-12 rounded-sm" />
+                    </span>
+                </div>
             </h2>
-            <span className="block text-xl md:text-2xl font-serif text-zen-accent tracking-[0.3em] font-bold uppercase mt-2">
-                Pattern Recognition
-            </span>
         </div>
 
         {/* 2. 3D INTERACTIVE SPHERE */}
@@ -342,7 +354,7 @@ const LogicShift: React.FC = () => {
             {/* Version Label Overlay */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center pointer-events-none">
                 <span className="text-[10px] font-mono tracking-[0.4em] text-zen-text/40 uppercase bg-[#F9F7F2]/80 px-3 py-1 backdrop-blur-md border border-zen-accent/20 rounded-sm">
-                    Ganzhi Logic Engine v5.2 (3D)
+                    Ganzhi Logic Engine
                 </span>
             </div>
         </div>
@@ -360,7 +372,7 @@ const LogicShift: React.FC = () => {
                 <div className="flex items-center gap-3">
                     <ShieldCheck className="w-4 h-4 text-zen-text/60" />
                     <span className="text-xs font-mono font-bold text-zen-text/80 tracking-widest uppercase">
-                        LOGIC_AUDIT_PROTOCOL_V5.2
+                        LOGIC_AUDIT_PROTOCOL
                     </span>
                 </div>
                 <div className="flex items-center gap-4 text-[10px] font-mono text-zen-text/40 uppercase">
@@ -368,7 +380,7 @@ const LogicShift: React.FC = () => {
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                         <span>SYSTEM_READY</span>
                     </div>
-                    <span>LAST_AUDIT: {new Date().toISOString().split('T')[0]}</span>
+                    <span>LAST_AUDIT: <span className="text-zen-text font-bold">{new Date().toISOString().split('T')[0]}</span></span>
                 </div>
             </div>
 
@@ -392,10 +404,10 @@ const LogicShift: React.FC = () => {
                     {/* Content Column */}
                     <div className="md:col-span-6 p-6 flex flex-col justify-center">
                          <h3 className="font-serif text-lg font-bold text-zen-text mb-2 flex items-center gap-2">
-                            数据底座 (Core Dataset)
+                            Core Dataset
                          </h3>
                          <p className="font-sans text-sm text-zen-text/70 leading-relaxed text-justify">
-                            并非迷信，而是基于 5,000 年连续天文观测。我们调取历经千年的行星轨迹偏差数据，确保每一组干支代码都有物理坐标支撑。
+                            Not superstition, but based on 5,000 years of continuous astronomical observation. We retrieve planetary trajectory deviation data spanning millennia to ensure every Ganzhi code has physical coordinate backing.
                          </p>
                     </div>
                     {/* Visual Column */}
@@ -419,10 +431,10 @@ const LogicShift: React.FC = () => {
                     </div>
                     <div className="md:col-span-6 p-6 flex flex-col justify-center">
                          <h3 className="font-serif text-lg font-bold text-zen-text mb-2 flex items-center gap-2">
-                            运算引擎 (Computational Engine)
+                            Computational Engine
                          </h3>
                          <p className="font-sans text-sm text-zen-text/70 leading-relaxed text-justify">
-                            将你的出生时刻视为一个‘时间胶囊’。算法通过东方五行交互逻辑进行高维解压，提取出 120,000 组关于能量流转的底层代码。
+                            Treating your birth moment as a 'time capsule'. The algorithm uses Eastern Five Elements interaction logic for high-dimensional decompression, extracting 120,000 lines of underlying code regarding energy flow.
                          </p>
                     </div>
                     <div className="md:col-span-3 p-4 border-l border-[#2D2D2D]/10 bg-white/30 flex items-center justify-center">
@@ -439,16 +451,16 @@ const LogicShift: React.FC = () => {
                         </div>
                         <div className="font-mono text-sm font-bold text-zen-text">RISK_MITIGATION</div>
                         <div className="mt-2 text-[10px] font-mono text-zen-text/40 leading-tight">
-                            TARGET_YEAR: 2026 (丙午)<br/>
+                            TARGET_YEAR: 2026 (Bing Wu)<br/>
                             CONFIDENCE: 98.4%
                         </div>
                     </div>
                     <div className="md:col-span-6 p-6 flex flex-col justify-center">
                          <h3 className="font-serif text-lg font-bold text-zen-text mb-2 flex items-center gap-2">
-                            战略建模 (Strategic Model)
+                            Strategic Modeling
                          </h3>
                          <p className="font-sans text-sm text-zen-text/70 leading-relaxed text-justify">
-                            当你的原始代码与 2026 年的双火（丙午）能量场发生碰撞，不确定性被转化为确定性的风险概率。我们不预言，我们计算胜率。
+                            When your source code collides with the 2026 Double Fire (Bing Wu) energy field, uncertainty is transformed into deterministic risk probabilities. We don't predict; we calculate odds.
                          </p>
                     </div>
                     <div className="md:col-span-3 p-4 border-l border-[#2D2D2D]/10 bg-white/30 flex items-center justify-center">

@@ -13,6 +13,7 @@ import FinalPush from './components/FinalPush';
 import EnergyForecast from './components/HorizontalScroll';
 import AnxietyFeed from './components/BentoGrid';
 import CelebrityProfiles from './components/CelebrityProfiles';
+import Footer from './components/Footer';
 
 type ViewState = 'LANDING' | 'CALIBRATION' | 'CALCULATION' | 'REVEAL' | 'FOUNDATION' | 'CHECKOUT';
 
@@ -85,9 +86,8 @@ const App: React.FC = () => {
             {/* Final CTA & FAQ Section */}
             <FinalPush onStart={() => setView('CALIBRATION')} />
 
-            <footer className="w-full py-8 text-center text-xs text-zen-text/30 dark:text-zen-subtle/30 bg-zen-bg dark:bg-[#050B14] transition-colors duration-500">
-                &copy; {new Date().getFullYear()} FatePlanner. All patterns recognized.
-            </footer>
+            {/* Comprehensive Footer */}
+            <Footer />
           </div>
         </>
       )}

@@ -9,50 +9,50 @@ const YEARS = Array.from({ length: 61 }, (_, i) => String(1970 + i)); // 1970 - 
 
 // 12 Shichen (Chinese Hours)
 const SHICHEN_OPTIONS = [
-  "子时 (23:00-01:00)",
-  "丑时 (01:00-03:00)",
-  "寅时 (03:00-05:00)",
-  "卯时 (05:00-07:00)",
-  "辰时 (07:00-09:00)",
-  "巳时 (09:00-11:00)",
-  "午时 (11:00-13:00)",
-  "未时 (13:00-15:00)",
-  "申时 (15:00-17:00)",
-  "酉时 (17:00-19:00)",
-  "戌时 (19:00-21:00)",
-  "亥时 (21:00-23:00)"
+  "Rat Hour (23:00-01:00)",
+  "Ox Hour (01:00-03:00)",
+  "Tiger Hour (03:00-05:00)",
+  "Rabbit Hour (05:00-07:00)",
+  "Dragon Hour (07:00-09:00)",
+  "Snake Hour (09:00-11:00)",
+  "Horse Hour (11:00-13:00)",
+  "Goat Hour (13:00-15:00)",
+  "Monkey Hour (15:00-17:00)",
+  "Rooster Hour (17:00-19:00)",
+  "Dog Hour (19:00-21:00)",
+  "Pig Hour (21:00-23:00)"
 ];
 
 type Sector = 'CAREER' | 'WEALTH' | 'LOVE' | 'HEALTH';
 
 const SECTOR_QUESTIONS: Record<Sector, string[]> = {
   CAREER: [
-    "我常感觉自己的职业命运并不掌握在自己手中，而是受制于某种外部的、不可控的‘系统规则’（如签证、大环境）。",
-    "与同级别的白人或他族裔同事相比，我感到自己付出了更多努力，却更难获得核心权力和晋升。",
-    "在目前的职场环境中，我缺乏一位能够真正提携我、为我背书的‘关键贵人’（Sponsor）。",
-    "对于 2026 年，我处于一种‘不知道该苟住还是该跳槽’的战略迷茫中。",
-    "即便在休息日，我也很难真正关掉大脑。‘停下来’会让我感到内疚或恐慌。"
+    "I often feel my career destiny is not in my hands, but controlled by some external, uncontrollable 'system rules' (e.g., visas, macro environment).",
+    "Compared to peers of other ethnicities, I feel I put in more effort but find it harder to gain core power and promotion.",
+    "In my current workplace, I lack a 'Key Sponsor' who can truly advocate for me.",
+    "Regarding 2026, I am in a state of strategic confusion about whether to 'hunker down' or switch jobs.",
+    "Even on days off, I find it hard to truly switch off my brain. 'Stopping' makes me feel guilty or panicked."
   ],
   WEALTH: [
-    "我的‘正财’（工资收入）是目前唯一的安全网。如果失去这份工作，我的生活质量将在 3 个月内崩塌。",
-    "我感觉自己命中注定的‘财富容量’尚未被填满，目前的收入远低于我的真实潜能。",
-    "面对 2026 年的市场，我最恐惧的不是‘赚不到钱’，而是‘因一次错误决策而导致资产缩水’。",
-    "我很难留住现金。每当有一笔额外收入，总会发生意想不到的事情（人情、意外）迫使我花掉它。",
-    "我极度渴望开启副业（偏财），但始终无法确定具体的方向或切入时机。"
+    "My 'Primary Income' (salary) is my only safety net. If I lose this job, my quality of life would collapse within 3 months.",
+    "I feel my destined 'wealth capacity' has not yet been filled, and my current income is far below my true potential.",
+    "Facing the 2026 market, my biggest fear is not 'earning less', but 'asset shrinkage caused by a wrong decision'.",
+    "I find it hard to hold onto cash. Whenever there is extra income, unexpected events (favors, accidents) force me to spend it.",
+    "I desperately crave a side hustle (Indirect Wealth), but can never determine a specific direction or entry timing."
   ],
   LOVE: [
-    "我对 Dating Apps 感到厌倦。我认为基于照片和兴趣标签的算法，无法帮我筛选出灵魂契合的伴侣。",
-    "我的婚恋决策在很大程度上受到原生家庭（父母）期望的干扰或压力。",
-    "我担心自己正在错过‘最佳择偶窗口期’，这种时间焦虑影响了我的判断。",
-    "我感觉自己的感情剧本里，总是缺乏‘确定性’和‘安全感’。",
-    "我需要一个理性的、非情感化的工具，来评估我与潜在伴侣的底层兼容性（风险风控）。"
+    "I am tired of Dating Apps. I believe algorithms based on photos and interest tags cannot filter for a soul-compatible partner.",
+    "My romantic decisions are heavily influenced or pressured by expectations from my family/parents.",
+    "I worry I am missing my 'prime selection window', and this time anxiety is affecting my judgment.",
+    "I feel my relationship script always lacks 'certainty' and 'security'.",
+    "I need a rational, non-emotional tool to evaluate my underlying compatibility with potential partners (Risk Control)."
   ],
   HEALTH: [
-    "我经常感到不明原因的身体疲劳、燥热或沉重，即便体检指标显示‘正常’。",
-    "我经常在深夜（尤其是凌晨 1-3 点）醒来或难以入睡，思绪处于失控的焦虑循环中。",
-    "我发现最近自己的情绪爆发点变低了（易怒、易哭或冷漠），这开始影响我的人际关系。",
-    "我怀疑我目前的居住环境（光线、布局、气场）正在消耗我的能量，而不是滋养我。",
-    "我潜意识里恐惧 2026 年会发生一场突如其来的健康危机，打断我的人生计划。"
+    "I often feel unexplained physical fatigue, heat, or heaviness, even when checkups show 'normal'.",
+    "I frequently wake up late at night (especially 1-3 AM) or have trouble sleeping, with my thoughts in an uncontrolled anxiety loop.",
+    "I notice my emotional trigger point has lowered recently (easily angered, crying, or indifferent), affecting my relationships.",
+    "I suspect my current living environment (lighting, layout, energy) is draining me rather than nourishing me.",
+    "Subconsciously, I fear a sudden health crisis in 2026 will interrupt my life plans."
   ]
 };
 
@@ -77,7 +77,7 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
     birthMonth: 'JAN',
     birthDay: '01',
     birthYear: '1990',
-    birthTime: '午时 (11:00-13:00)', // Changed from Hour/Minute
+    birthTime: 'Horse Hour (11:00-13:00)', // Changed from Hour/Minute
     gender: '', // 'YANG' | 'YIN'
     location: '',
     focus: '' as Sector | '',
@@ -305,7 +305,7 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
             {step === 1 && renderInput(
                 formData.name, 
                 (v) => setFormData({...formData, name: v}), 
-                'Full Name / 姓名', 
+                'Full Name', 
                 'text',
                 <User className="w-6 h-6" />
             )}
@@ -314,39 +314,31 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
                 <div className="flex flex-col items-center gap-6 animate-in zoom-in-95 duration-500 w-full max-w-5xl">
                     
                     {/* Unified Date & Time Block */}
-                    <div className="flex flex-col items-center p-6 glass-card rounded-2xl border border-zen-accent/20 shadow-lg bg-white/20 w-full max-w-4xl">
-                        
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6 w-full">
-                            {/* Date Group */}
-                            <div className="flex gap-2 md:gap-4 items-center justify-center">
-                                <ScrollWheel items={YEARS} value={formData.birthYear} onChange={(v) => setFormData({...formData, birthYear: v})} label="YEAR" width="w-20 md:w-24" />
-                                <div className="hidden md:block h-16 w-px bg-zen-text/10" />
-                                <ScrollWheel items={MONTHS} value={formData.birthMonth} onChange={(v) => setFormData({...formData, birthMonth: v})} label="MONTH" width="w-16 md:w-20" />
-                                <div className="hidden md:block h-16 w-px bg-zen-text/10" />
-                                <ScrollWheel items={DAYS} value={formData.birthDay} onChange={(v) => setFormData({...formData, birthDay: v})} label="DAY" width="w-16 md:w-20" />
-                            </div>
-
-                            {/* Divider between Date and Time (Desktop) */}
-                            <div className="hidden md:block h-16 w-px bg-zen-accent/30" />
-                            {/* Divider (Mobile) */}
-                            <div className="md:hidden w-full h-px bg-zen-text/10 my-4" />
-
-                            {/* Time Group */}
-                            <div className="flex items-center justify-center">
-                                <ScrollWheel 
-                                    items={SHICHEN_OPTIONS} 
-                                    value={formData.birthTime} 
-                                    onChange={(v) => setFormData({...formData, birthTime: v})} 
-                                    label="TIME / 时辰" 
-                                    width="w-56 md:w-64" 
-                                />
-                            </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6 w-full">
+                        {/* Date Group */}
+                        <div className="flex gap-2 md:gap-4 items-center justify-center">
+                            <ScrollWheel items={YEARS} value={formData.birthYear} onChange={(v) => setFormData({...formData, birthYear: v})} label="YEAR" width="w-20 md:w-24" />
+                            <div className="hidden md:block h-16 w-px bg-zen-text/10" />
+                            <ScrollWheel items={MONTHS} value={formData.birthMonth} onChange={(v) => setFormData({...formData, birthMonth: v})} label="MONTH" width="w-16 md:w-20" />
+                            <div className="hidden md:block h-16 w-px bg-zen-text/10" />
+                            <ScrollWheel items={DAYS} value={formData.birthDay} onChange={(v) => setFormData({...formData, birthDay: v})} label="DAY" width="w-16 md:w-20" />
                         </div>
 
-                        {/* Disclaimer inside the card */}
-                        <p className="text-xs font-sans text-zen-text/40 text-center mt-6 pt-4 border-t border-zen-text/5 w-full">
-                            If you can't determine the specific birth time, please set the time to 12:00.
-                        </p>
+                        {/* Divider between Date and Time (Desktop) */}
+                        <div className="hidden md:block h-16 w-px bg-zen-accent/30" />
+                        {/* Divider (Mobile) */}
+                        <div className="md:hidden w-full h-px bg-zen-text/10 my-4" />
+
+                        {/* Time Group */}
+                        <div className="flex items-center justify-center">
+                            <ScrollWheel 
+                                items={SHICHEN_OPTIONS} 
+                                value={formData.birthTime} 
+                                onChange={(v) => setFormData({...formData, birthTime: v})} 
+                                label="TIME" 
+                                width="w-56 md:w-64" 
+                            />
+                        </div>
                     </div>
 
                     <button 
@@ -368,7 +360,7 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
                             <Sun className="w-12 h-12 text-zen-text group-hover:text-zen-accent group-hover:rotate-180 transition-all duration-700" />
                         </div>
                         <span className="font-serif text-xl font-bold">YANG</span>
-                        <span className="text-xs text-zen-text/40 font-mono mt-2 tracking-widest">MALE / 男</span>
+                        <span className="text-xs text-zen-text/40 font-mono mt-2 tracking-widest">MALE</span>
                     </button>
                     <button 
                         onClick={() => { setFormData({...formData, gender: 'YIN'}); handleNext(); }}
@@ -378,7 +370,7 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
                             <Moon className="w-12 h-12 text-zen-text group-hover:text-zen-accent group-hover:-rotate-12 transition-all duration-700" />
                         </div>
                         <span className="font-serif text-xl font-bold">YIN</span>
-                        <span className="text-xs text-zen-text/40 font-mono mt-2 tracking-widest">FEMALE / 女</span>
+                        <span className="text-xs text-zen-text/40 font-mono mt-2 tracking-widest">FEMALE</span>
                     </button>
                 </div>
             )}
@@ -386,7 +378,7 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
             {step === 4 && renderInput(
                 formData.location, 
                 (v) => setFormData({...formData, location: v}), 
-                'City of Birth / 出生城市', 
+                'City of Birth', 
                 'text',
                 <MapPin className="w-6 h-6" />,
                 "CONFIRM COORDINATES"
@@ -395,10 +387,10 @@ const Calibration: React.FC<CalibrationProps> = ({ onBack, onComplete }) => {
             {step === 5 && (
                 <div className="grid grid-cols-2 gap-4 w-full max-w-2xl animate-in zoom-in-95 duration-500">
                     {[
-                        { id: 'CAREER', label: '事业 / CAREER', icon: <Briefcase className="w-6 h-6" /> },
-                        { id: 'WEALTH', label: '财富 / WEALTH', icon: <Coins className="w-6 h-6" /> },
-                        { id: 'LOVE', label: '感情 / LOVE', icon: <Heart className="w-6 h-6" /> },
-                        { id: 'HEALTH', label: '健康 / HEALTH', icon: <Activity className="w-6 h-6" /> }
+                        { id: 'CAREER', label: 'CAREER', icon: <Briefcase className="w-6 h-6" /> },
+                        { id: 'WEALTH', label: 'WEALTH', icon: <Coins className="w-6 h-6" /> },
+                        { id: 'LOVE', label: 'LOVE', icon: <Heart className="w-6 h-6" /> },
+                        { id: 'HEALTH', label: 'HEALTH', icon: <Activity className="w-6 h-6" /> }
                     ].map(opt => (
                         <button
                             key={opt.id}

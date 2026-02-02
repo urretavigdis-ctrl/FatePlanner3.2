@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   HelpCircle, ChevronDown, ShieldCheck, 
-  Zap, Clock, FileCheck, Lock, ArrowRight 
+  Zap, Clock, FileCheck, Lock, ArrowRight, Calendar
 } from 'lucide-react';
 
 interface FinalPushProps {
@@ -10,43 +10,34 @@ interface FinalPushProps {
 
 const FAQS = [
   {
-    q: "这套算法真的科学吗？",
-    a: "八字并非玄学，而是运行了 5000 年的复杂模式识别系统。FatePlanner 将古老的五行干支逻辑转化为现代数据模型，所有预测均基于能量密度的数学推导，而非随机预言。",
+    q: "Why does the energy cycle start in February, not Jan 1st?",
+    a: "Unlike the Gregorian calendar, our algorithm tracks the 'Solar Energy Year' (Ganzhi). The true atmospheric and magnetic shift of 2026 officially begins at the 'Start of Spring' (Li Chun), usually around February 4th. January is considered a transitional tail of the previous year's energy.",
+    icon: <Calendar className="w-5 h-5" />
+  },
+  {
+    q: "Is this algorithm scientifically valid?",
+    a: "BaZi is not metaphysics, but a complex pattern recognition system operating for 5,000 years. FatePlanner translates ancient Five Elements and Ganzhi logic into modern data models. All predictions are based on mathematical derivation of energy density, not random prophecy.",
     icon: <Zap className="w-5 h-5" />
   },
   {
-    q: "我的个人隐私如何保障？",
-    a: "我们采用银行级 AES-256 加密技术。您的生辰信息仅用于生成瞬时的算法模型，报告生成后，核心数据将被脱敏处理。",
+    q: "How is my privacy protected?",
+    a: "We use bank-grade AES-256 encryption. Your birth information is only used to generate the instantaneous algorithmic model. Core data is desensitized immediately after the report is generated.",
     icon: <Lock className="w-5 h-5" />
   },
   {
-    q: "如果我不记得准确的出生分钟怎么办？",
-    a: "系统拥有“真太阳时”校准功能。如果您不确定具体时间，建议选择时辰范围，算法会自动根据当天的经纬度磁场进行权重平摊，依然具有极高的参考价值。",
+    q: "What if I don't know my exact birth minute?",
+    a: "The system features 'True Solar Time' calibration. If you are unsure of the specific time, we recommend selecting a time range. The algorithm will automatically weigh the magnetic field based on the longitude of the day, still providing high reference value.",
     icon: <Clock className="w-5 h-5" />
   },
   {
-    q: "PDF 报告如何交付？",
-    a: "支付成功后，系统将在 30 秒内完成 37 页数据的云端演算。您可以直接在网页下载 PDF，同时我们会向您的注册邮箱发送备份链接。",
+    q: "How is the PDF report delivered?",
+    a: "After successful payment, the system completes the 37-page data calculation in the cloud within 30 seconds. You can download the PDF directly on the webpage, and we will also send a backup link to your registered email.",
     icon: <FileCheck className="w-5 h-5" />
   }
 ];
 
 const FinalPush: React.FC<FinalPushProps> = ({ onStart }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const [timeLeft, setTimeLeft] = useState(180); // 3 minutes
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (s: number) => {
-    const min = Math.floor(s / 60);
-    const sec = s % 60;
-    return `${min}:${sec.toString().padStart(2, '0')}`;
-  };
 
   return (
     <section className="w-full bg-zen-bg pt-20 pb-0 flex flex-col items-center">
@@ -54,10 +45,6 @@ const FinalPush: React.FC<FinalPushProps> = ({ onStart }) => {
       {/* 1. FAQ Section */}
       <div className="max-w-3xl w-full px-6 mb-24">
         <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zen-text/5 text-zen-text/60 mb-4">
-                <HelpCircle className="w-4 h-4" />
-                <span className="text-[10px] font-mono tracking-widest uppercase">Transparency Protocol</span>
-            </div>
             <h2 className="text-3xl font-serif font-bold text-zen-text">Algorithm Transparency</h2>
         </div>
 
@@ -104,21 +91,13 @@ const FinalPush: React.FC<FinalPushProps> = ({ onStart }) => {
          
          <div className="max-w-4xl mx-auto relative z-10 text-center">
             
-            {/* Urgency Timer */}
-            <div className="inline-flex items-center gap-2 bg-[#C56E61]/10 text-[#C56E61] px-4 py-1.5 rounded-full border border-[#C56E61]/20 mb-8 animate-pulse">
-                <Clock className="w-4 h-4" />
-                <span className="font-mono text-xs font-bold tracking-widest">
-                    OFFER EXPIRES IN: {formatTime(timeLeft)}
-                </span>
-            </div>
-
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-zen-text mb-6 leading-tight">
-                别让 2026 年成为<br/>你生命中的黑盒。
+                Don't let 2026 become a<br/>black box in your life
             </h2>
             
             <p className="text-lg text-zen-text/70 font-sans max-w-2xl mx-auto mb-10 leading-relaxed">
-                已经有超过 <span className="font-bold text-zen-text border-b border-zen-accent/50">12,000 位理性决策者</span> 通过 FatePlanner 锁定了他们的年度战略。<br/>
-                现在，该轮到你了。
+                Over <span className="font-bold text-zen-text border-b border-zen-accent/50">12,000 rational decision-makers</span> have locked their annual strategy with FatePlanner.<br/>
+                Now, it's your turn.
             </p>
 
             {/* Main Action Area */}
@@ -129,7 +108,7 @@ const FinalPush: React.FC<FinalPushProps> = ({ onStart }) => {
                 >
                     <div className="flex items-center justify-center gap-3">
                         <span className="font-serif font-bold text-xl tracking-wider">
-                            [ 立即开启 2026 战略解密 ]
+                            [ Start 2026 Strategy Decryption ]
                         </span>
                         <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                     </div>

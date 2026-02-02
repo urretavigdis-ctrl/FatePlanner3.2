@@ -117,13 +117,13 @@ const ShishenReveal: React.FC<ShishenRevealProps> = ({ onComplete }) => {
                             THE ARCHITECT
                         </h1>
                         <h2 className="text-xl font-serif text-zen-accent mb-8 italic tracking-widest border-b border-zen-accent/30 pb-2 inline-block">
-                            正印格
+                            Direct Seal Pattern
                         </h2>
 
                         {/* TRAITS & FORECAST */}
                         <div className="w-full space-y-6">
                             <p className="font-serif text-zen-text/80 text-lg leading-relaxed italic">
-                                "作为‘正印’格的化身，你天生携带保护能量。在 2026 年，你不是士兵，而是构建秩序的建筑师。"
+                                "As the embodiment of the 'Direct Seal', you naturally carry protective energy. In 2026, you are not a soldier, but an architect building order."
                             </p>
 
                             {/* ATTRIBUTES BARS */}
@@ -140,7 +140,7 @@ const ShishenReveal: React.FC<ShishenRevealProps> = ({ onComplete }) => {
                                 </div>
                                 <span className="block text-xs font-mono text-zen-accent tracking-widest mb-2">CRITICAL FORECAST 2026</span>
                                 <p className="font-serif text-sm leading-relaxed opacity-90">
-                                    明年通过建立系统而非个人努力来获取财富。警惕过度思考导致的行动瘫痪。
+                                    Next year, acquire wealth by building systems rather than personal effort. Beware of action paralysis caused by overthinking.
                                 </p>
                             </div>
                         </div>

@@ -154,9 +154,9 @@ const Header: React.FC = () => {
                     <button className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-zen-text/5 text-zen-text dark:text-zen-subtle text-sm font-medium transition-colors group">
                         <div className="flex items-center gap-3">
                             <Globe className="w-4 h-4 text-zen-text/60 group-hover:text-zen-accent transition-colors" />
-                            <span>Language / 语言</span>
+                            <span>Language</span>
                         </div>
-                        <span className="text-xs font-mono text-zen-text/40 bg-zen-text/5 px-1.5 py-0.5 rounded">ZH</span>
+                        <span className="text-xs font-mono text-zen-text/40 bg-zen-text/5 px-1.5 py-0.5 rounded">EN</span>
                     </button>
 
                     {/* Theme Switch */}

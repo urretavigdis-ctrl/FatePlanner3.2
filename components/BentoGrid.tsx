@@ -16,95 +16,95 @@ interface FeedItem extends BentoItem {
 // --- DATA SETS (20 items per category) ---
 
 const wealthItems: FeedItem[] = [
-  { id: 'w1', category: 'WEALTH', tag: '副业方向?', question: '我该老实拿死工资，还是大胆搞副业赚钱？哪条路才是我的“正财”？', icon: <Coins className="w-4 h-4" /> },
-  { id: 'w2', category: 'WEALTH', tag: '2026会破财吗?', question: '明年是否会发生意外的大额支出？哪几个月最容易被人借钱不还？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'w3', category: 'WEALTH', tag: '投资被套?', question: '目前持有的资产在2026年是应该继续持有还是尽快止损？', icon: <TrendingUp className="w-4 h-4" /> },
-  { id: 'w4', category: 'WEALTH', tag: '何时加薪?', question: '目前的职场运势是否有加薪的可能，还是应该通过跳槽来实现？', icon: <Coins className="w-4 h-4" /> },
-  { id: 'w5', category: 'WEALTH', tag: '正财还是偏财?', question: '我的命盘显示我适合稳健的工作收入，还是风险较高的投资收入？', icon: <Coins className="w-4 h-4" /> },
-  { id: 'w6', category: 'WEALTH', tag: '现金流危机?', question: '下半年是否会遇到现金流断裂的风险？如何提前储备？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'w7', category: 'WEALTH', tag: '买房时机?', question: '2026年是买房抄底的好时机，还是会站在高岗上？', icon: <Home className="w-4 h-4" /> },
-  { id: 'w8', category: 'WEALTH', tag: '股票解套?', question: '手里的股票还有回本的希望吗？', icon: <TrendingUp className="w-4 h-4" /> },
-  { id: 'w9', category: 'WEALTH', tag: '合伙人风险?', question: '想和朋友合伙做生意，但他会不会坑我？', icon: <Users className="w-4 h-4" /> },
-  { id: 'w10', category: 'WEALTH', tag: '税务问题?', question: '今年是否有因财务合规问题导致的破财风险？', icon: <FileText className="w-4 h-4" /> },
-  { id: 'w11', category: 'WEALTH', tag: '隐形债务?', question: '是否会因为担保或人情背上不该背的债？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'w12', category: 'WEALTH', tag: '薪资谈判?', question: '下个月谈薪资，底气在哪里？', icon: <Briefcase className="w-4 h-4" /> },
-  { id: 'w13', category: 'WEALTH', tag: '行业红利?', question: '我所在的行业未来三年是上升期还是衰退期？', icon: <Zap className="w-4 h-4" /> },
-  { id: 'w14', category: 'WEALTH', tag: '资产配置?', question: '应该持有现金，还是换成黄金或外汇？', icon: <PieChart className="w-4 h-4" /> },
-  { id: 'w15', category: 'WEALTH', tag: '储蓄目标?', question: '为什么我存不下钱？哪里漏财？', icon: <Coins className="w-4 h-4" /> },
-  { id: 'w16', category: 'WEALTH', tag: '消费陷阱?', question: '最近是否有冲动消费的破财星入命？', icon: <ShoppingBag className="w-4 h-4" /> },
-  { id: 'w17', category: 'WEALTH', tag: '被动收入?', question: '如何建立睡后收入？', icon: <Zap className="w-4 h-4" /> },
-  { id: 'w18', category: 'WEALTH', tag: '搞钱野路子?', question: '有没有适合我的冷门赚钱门路？', icon: <Compass className="w-4 h-4" /> },
-  { id: 'w19', category: 'WEALTH', tag: '失业救济?', question: '如果失业，我的积蓄能撑多久？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'w20', category: 'WEALTH', tag: '暴富机会?', question: '这辈子有没有一夜暴富的命格？', icon: <Sparkles className="w-4 h-4" /> },
+  { id: 'w1', category: 'WEALTH', tag: 'Side Hustle?', question: 'Should I stick to my fixed salary or boldly start a side business? Which is my "True Wealth" path?', icon: <Coins className="w-4 h-4" /> },
+  { id: 'w2', category: 'WEALTH', tag: 'Financial Loss?', question: 'Will there be unexpected large expenses in 2026? Which months are prone to bad debts?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'w3', category: 'WEALTH', tag: 'Investment Trap?', question: 'Should I hold onto my current assets in 2026 or cut losses ASAP?', icon: <TrendingUp className="w-4 h-4" /> },
+  { id: 'w4', category: 'WEALTH', tag: 'Raise Timing?', question: 'Does my career luck suggest a raise, or should I switch jobs to get it?', icon: <Coins className="w-4 h-4" /> },
+  { id: 'w5', category: 'WEALTH', tag: 'Salary vs Invest?', question: 'Does my chart favor stable employment income or high-risk investment returns?', icon: <Coins className="w-4 h-4" /> },
+  { id: 'w6', category: 'WEALTH', tag: 'Cash Flow Crisis?', question: 'Is there a risk of cash flow rupture in the second half of the year? How to prepare?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'w7', category: 'WEALTH', tag: 'Buy Property?', question: 'Is 2026 a good time to buy at the bottom, or will I be buying at the peak?', icon: <Home className="w-4 h-4" /> },
+  { id: 'w8', category: 'WEALTH', tag: 'Stock Recovery?', question: 'Is there any hope for my stocks to break even?', icon: <TrendingUp className="w-4 h-4" /> },
+  { id: 'w9', category: 'WEALTH', tag: 'Partner Risk?', question: 'I want to partner with a friend, but will they betray me?', icon: <Users className="w-4 h-4" /> },
+  { id: 'w10', category: 'WEALTH', tag: 'Tax Issues?', question: 'Is there a risk of financial loss due to tax compliance issues this year?', icon: <FileText className="w-4 h-4" /> },
+  { id: 'w11', category: 'WEALTH', tag: 'Hidden Debt?', question: 'Will I take on debt I shouldn\'t because of guarantees or favors?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'w12', category: 'WEALTH', tag: 'Salary Negotiation?', question: 'I\'m negotiating salary next month, what gives me leverage?', icon: <Briefcase className="w-4 h-4" /> },
+  { id: 'w13', category: 'WEALTH', tag: 'Industry Bonus?', question: 'Is my industry in an upward or downward cycle for the next three years?', icon: <Zap className="w-4 h-4" /> },
+  { id: 'w14', category: 'WEALTH', tag: 'Asset Allocation?', question: 'Should I hold cash, or convert to gold or foreign currency?', icon: <PieChart className="w-4 h-4" /> },
+  { id: 'w15', category: 'WEALTH', tag: 'Savings Goal?', question: 'Why can\'t I save money? Where is the leak?', icon: <Coins className="w-4 h-4" /> },
+  { id: 'w16', category: 'WEALTH', tag: 'Spending Trap?', question: 'Is there a "Wealth Drain" star affecting me with impulsive spending?', icon: <ShoppingBag className="w-4 h-4" /> },
+  { id: 'w17', category: 'WEALTH', tag: 'Passive Income?', question: 'How can I build income that generates while I sleep?', icon: <Zap className="w-4 h-4" /> },
+  { id: 'w18', category: 'WEALTH', tag: 'Niche Income?', question: 'Are there any niche money-making paths suitable for me?', icon: <Compass className="w-4 h-4" /> },
+  { id: 'w19', category: 'WEALTH', tag: 'Unemployment?', question: 'If I lose my job, how long will my savings last?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'w20', category: 'WEALTH', tag: 'Sudden Wealth?', question: 'Do I have the destiny for overnight riches in this lifetime?', icon: <Sparkles className="w-4 h-4" /> },
 ];
 
 const loveItems: FeedItem[] = [
-  { id: 'l1', category: 'LOVE', tag: '正缘在哪里?', question: '2026年到底有没有脱单机会？另一半会在什么场合出现？', icon: <Heart className="w-4 h-4" /> },
-  { id: 'l2', category: 'LOVE', tag: '分手还是结婚?', question: '和伴侣关系紧张，2026年的能量是有利于结婚稳定，还是面临分手危机？', icon: <Users className="w-4 h-4" /> },
-  { id: 'l3', category: 'LOVE', tag: '烂桃花?', question: '如何辨别遇到的对象是正缘还是来消耗我的“烂桃花”？', icon: <HeartOff className="w-4 h-4" /> },
-  { id: 'l4', category: 'LOVE', tag: '前任回头?', question: '前任最近联系我，是旧情复燃还是重蹈覆辙？', icon: <History className="w-4 h-4" /> },
-  { id: 'l5', category: 'LOVE', tag: '相亲靠谱吗?', question: '家里介绍的对象值得见吗？', icon: <Users className="w-4 h-4" /> },
-  { id: 'l6', category: 'LOVE', tag: '对方忠诚吗?', question: '总感觉另一半有事瞒着我，是有第三者吗？', icon: <Eye className="w-4 h-4" /> },
-  { id: 'l7', category: 'LOVE', tag: '何时脱单?', question: '还要单身多久？确切的脱单月份是几月？', icon: <Calendar className="w-4 h-4" /> },
-  { id: 'l8', category: 'LOVE', tag: '婚姻危机?', question: '七年之痒，这段婚姻还能走下去吗？', icon: <HeartCrack className="w-4 h-4" /> },
-  { id: 'l9', category: 'LOVE', tag: '灵魂伴侣?', question: '这世界上真的有懂我的灵魂伴侣吗？', icon: <Sparkles className="w-4 h-4" /> },
-  { id: 'l10', category: 'LOVE', tag: '异地恋?', question: '异地恋太辛苦，今年有机会结束异地吗？', icon: <MapPin className="w-4 h-4" /> },
-  { id: 'l11', category: 'LOVE', tag: '父母反对?', question: '父母看不上我的对象，该坚持还是妥协？', icon: <Users className="w-4 h-4" /> },
-  { id: 'l12', category: 'LOVE', tag: '三角关系?', question: '陷入了复杂的感情纠葛，怎么全身而退？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'l13', category: 'LOVE', tag: '备胎转正?', question: '我对他这么好，他会看到我吗？', icon: <Clock className="w-4 h-4" /> },
-  { id: 'l14', category: 'LOVE', tag: '闪婚风险?', question: '认识不久就想结婚，是冲动还是缘分？', icon: <Zap className="w-4 h-4" /> },
-  { id: 'l15', category: 'LOVE', tag: '冷战怎么破?', question: '谁都不肯低头，这段关系要凉了吗？', icon: <ThermometerSnowflake className="w-4 h-4" /> },
-  { id: 'l16', category: 'LOVE', tag: '是否独身?', question: '我是不是注定孤独终老的命？', icon: <User className="w-4 h-4" /> },
-  { id: 'l17', category: 'LOVE', tag: '同性缘分?', question: '我的取向不被理解，哪里能遇到同类？', icon: <Rainbow className="w-4 h-4" /> },
-  { id: 'l18', category: 'LOVE', tag: '桃花劫?', question: '最近异性缘太好，是福还是祸？', icon: <AlertCircle className="w-4 h-4" /> },
-  { id: 'l19', category: 'LOVE', tag: '办公室恋情?', question: '喜欢上了同事，该表白还是隐藏？', icon: <Briefcase className="w-4 h-4" /> },
-  { id: 'l20', category: 'LOVE', tag: '复合概率?', question: '分手半年了，还有机会复合吗？', icon: <RefreshCcw className="w-4 h-4" /> },
+  { id: 'l1', category: 'LOVE', tag: 'Where is The One?', question: 'Is there any chance to meet someone in 2026? Where will they appear?', icon: <Heart className="w-4 h-4" /> },
+  { id: 'l2', category: 'LOVE', tag: 'Breakup or Marry?', question: 'Relationship is tense. Does 2026 energy favor marriage or breakup?', icon: <Users className="w-4 h-4" /> },
+  { id: 'l3', category: 'LOVE', tag: 'Toxic Romance?', question: 'How do I identify if someone is "The One" or just a toxic distraction?', icon: <HeartOff className="w-4 h-4" /> },
+  { id: 'l4', category: 'LOVE', tag: 'Ex Returning?', question: 'My ex contacted me. Is it a reunion or a repeat of mistakes?', icon: <History className="w-4 h-4" /> },
+  { id: 'l5', category: 'LOVE', tag: 'Matchmaking?', question: 'Is the person my family introduced worth meeting?', icon: <Users className="w-4 h-4" /> },
+  { id: 'l6', category: 'LOVE', tag: 'Loyalty Check?', question: 'I feel my partner is hiding something. Is there a third party?', icon: <Eye className="w-4 h-4" /> },
+  { id: 'l7', category: 'LOVE', tag: 'Single How Long?', question: 'How much longer will I be single? Which month is the breakthrough?', icon: <Calendar className="w-4 h-4" /> },
+  { id: 'l8', category: 'LOVE', tag: 'Marriage Crisis?', question: 'The seven-year itch. Can this marriage survive?', icon: <HeartCrack className="w-4 h-4" /> },
+  { id: 'l9', category: 'LOVE', tag: 'Soulmate?', question: 'Does a soulmate who truly understands me really exist?', icon: <Sparkles className="w-4 h-4" /> },
+  { id: 'l10', category: 'LOVE', tag: 'Long Distance?', question: 'LDR is hard. Is there a chance to close the distance this year?', icon: <MapPin className="w-4 h-4" /> },
+  { id: 'l11', category: 'LOVE', tag: 'Parental Disapproval?', question: 'Parents dislike my partner. Should I persist or compromise?', icon: <Users className="w-4 h-4" /> },
+  { id: 'l12', category: 'LOVE', tag: 'Love Triangle?', question: 'Caught in a complex situation. How do I exit safely?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'l13', category: 'LOVE', tag: 'From Friend to Lover?', question: 'I treat them so well, will they ever see me romantically?', icon: <Clock className="w-4 h-4" /> },
+  { id: 'l14', category: 'LOVE', tag: 'Flash Marriage?', question: 'We just met and want to marry. Is it impulse or destiny?', icon: <Zap className="w-4 h-4" /> },
+  { id: 'l15', category: 'LOVE', tag: 'Cold War?', question: 'Neither of us will bow down. Is this relationship cooling off?', icon: <ThermometerSnowflake className="w-4 h-4" /> },
+  { id: 'l16', category: 'LOVE', tag: 'Destined Single?', question: 'Am I destined to be alone forever?', icon: <User className="w-4 h-4" /> },
+  { id: 'l17', category: 'LOVE', tag: 'LGBTQ+ Fate?', question: 'My orientation isn\'t understood. Where can I find my tribe?', icon: <Rainbow className="w-4 h-4" /> },
+  { id: 'l18', category: 'LOVE', tag: 'Peach Blossom Trap?', question: 'Too much attention from the opposite sex lately. Blessing or curse?', icon: <AlertCircle className="w-4 h-4" /> },
+  { id: 'l19', category: 'LOVE', tag: 'Office Romance?', question: 'I like a colleague. Should I confess or hide it?', icon: <Briefcase className="w-4 h-4" /> },
+  { id: 'l20', category: 'LOVE', tag: 'Reunion Chance?', question: 'Broke up six months ago. Is there a chance to get back together?', icon: <RefreshCcw className="w-4 h-4" /> },
 ];
 
 const healthItems: FeedItem[] = [
-  { id: 'h1', category: 'HEALTH', tag: '心火过旺?', question: '火气这么旺的年份，我身体哪个部位最容易出健康问题？如何提前预防？', icon: <Activity className="w-4 h-4" /> },
-  { id: 'h2', category: 'HEALTH', tag: '失眠多梦?', question: '最近总是凌晨醒来，是压力太大还是身体警报？', icon: <Moon className="w-4 h-4" /> },
-  { id: 'h3', category: 'HEALTH', tag: '脱发焦虑?', question: '头发掉得厉害，是肾虚还是熬夜？', icon: <UserMinus className="w-4 h-4" /> },
-  { id: 'h4', category: 'HEALTH', tag: '突发疾病?', question: '明年有没有需要动手术的风险？', icon: <Cross className="w-4 h-4" /> },
-  { id: 'h5', category: 'HEALTH', tag: '心理内耗?', question: '总是胡思乱想，我是不是抑郁了？', icon: <Brain className="w-4 h-4" /> },
-  { id: 'h6', category: 'HEALTH', tag: '甲状腺?', question: '体检甲状腺有结节，会恶化吗？', icon: <Activity className="w-4 h-4" /> },
-  { id: 'h7', category: 'HEALTH', tag: '肠胃隐患?', question: '吃什么都不消化，肠胃是不是出问题了？', icon: <Coffee className="w-4 h-4" /> },
-  { id: 'h8', category: 'HEALTH', tag: '手术风险?', question: '医生建议手术，今年适合动刀吗？', icon: <Scissors className="w-4 h-4" /> },
-  { id: 'h9', category: 'HEALTH', tag: '亚健康?', question: '总感觉累，去医院查不出毛病，怎么调理？', icon: <BatteryWarning className="w-4 h-4" /> },
-  { id: 'h10', category: 'HEALTH', tag: '过劳肥?', question: '越忙越胖，怎么打破这个循环？', icon: <Scale className="w-4 h-4" /> },
-  { id: 'h11', category: 'HEALTH', tag: '抑郁倾向?', question: '对什么都提不起兴趣，需要看心理医生吗？', icon: <CloudRain className="w-4 h-4" /> },
-  { id: 'h12', category: 'HEALTH', tag: '意外受伤?', question: '今年开车要不要特别小心？', icon: <AlertTriangle className="w-4 h-4" /> },
-  { id: 'h13', category: 'HEALTH', tag: '家中风水?', question: '家里的布局是不是影响了我的健康？', icon: <Compass className="w-4 h-4" /> },
-  { id: 'h14', category: 'HEALTH', tag: '五行缺水?', question: '我是不是五行缺水导致皮肤干？', icon: <Droplets className="w-4 h-4" /> },
-  { id: 'h15', category: 'HEALTH', tag: '精力管理?', question: '每天下午就犯困，怎么保持精力？', icon: <Zap className="w-4 h-4" /> },
-  { id: 'h16', category: 'HEALTH', tag: '旧疾复发?', question: '老毛病会不会在今年复发？', icon: <RotateCcw className="w-4 h-4" /> },
-  { id: 'h17', category: 'HEALTH', tag: '整容风险?', question: '想去整容，会不会毁容？', icon: <Smile className="w-4 h-4" /> },
-  { id: 'h18', category: 'HEALTH', tag: '身材焦虑?', question: '为什么怎么减肥都瘦不下来？', icon: <User className="w-4 h-4" /> },
-  { id: 'h19', category: 'HEALTH', tag: '免疫力?', question: '总是感冒，免疫力太差怎么办？', icon: <Shield className="w-4 h-4" /> },
-  { id: 'h20', category: 'HEALTH', tag: '职业病?', question: '腰椎颈椎受不了了，需要换工作养病吗？', icon: <Armchair className="w-4 h-4" /> },
+  { id: 'h1', category: 'HEALTH', tag: 'Excessive Fire?', question: 'With such strong Fire energy this year, which body part is most at risk? How to prevent it?', icon: <Activity className="w-4 h-4" /> },
+  { id: 'h2', category: 'HEALTH', tag: 'Insomnia?', question: 'Waking up early recently. Is it stress or a body alarm?', icon: <Moon className="w-4 h-4" /> },
+  { id: 'h3', category: 'HEALTH', tag: 'Hair Loss?', question: 'Losing hair fast. Is it kidney deficiency or staying up too late?', icon: <UserMinus className="w-4 h-4" /> },
+  { id: 'h4', category: 'HEALTH', tag: 'Sudden Illness?', question: 'Is there a risk of needing surgery next year?', icon: <Cross className="w-4 h-4" /> },
+  { id: 'h5', category: 'HEALTH', tag: 'Mental Burnout?', question: 'Always overthinking. Am I depressed?', icon: <Brain className="w-4 h-4" /> },
+  { id: 'h6', category: 'HEALTH', tag: 'Thyroid?', question: 'Checkup found thyroid nodules. Will they worsen?', icon: <Activity className="w-4 h-4" /> },
+  { id: 'h7', category: 'HEALTH', tag: 'Stomach Issues?', question: 'Indigestion whatever I eat. Is my stomach failing?', icon: <Coffee className="w-4 h-4" /> },
+  { id: 'h8', category: 'HEALTH', tag: 'Surgery Risk?', question: 'Doctor suggests surgery. Is this year suitable for going under the knife?', icon: <Scissors className="w-4 h-4" /> },
+  { id: 'h9', category: 'HEALTH', tag: 'Sub-health?', question: 'Always tired but checkups are fine. How to regulate?', icon: <BatteryWarning className="w-4 h-4" /> },
+  { id: 'h10', category: 'HEALTH', tag: 'Overwork Obesity?', question: 'The busier I am, the fatter I get. How to break this cycle?', icon: <Scale className="w-4 h-4" /> },
+  { id: 'h11', category: 'HEALTH', tag: 'Depression?', question: 'No interest in anything. Do I need a psychologist?', icon: <CloudRain className="w-4 h-4" /> },
+  { id: 'h12', category: 'HEALTH', tag: 'Accidental Injury?', question: 'Should I be extra careful driving this year?', icon: <AlertTriangle className="w-4 h-4" /> },
+  { id: 'h13', category: 'HEALTH', tag: 'Home Feng Shui?', question: 'Is my home layout affecting my health?', icon: <Compass className="w-4 h-4" /> },
+  { id: 'h14', category: 'HEALTH', tag: 'Lacking Water?', question: 'Is my dry skin due to a lack of Water element?', icon: <Droplets className="w-4 h-4" /> },
+  { id: 'h15', category: 'HEALTH', tag: 'Energy Management?', question: 'Sleepy every afternoon. How to maintain energy?', icon: <Zap className="w-4 h-4" /> },
+  { id: 'h16', category: 'HEALTH', tag: 'Old Illness?', question: 'Will my old condition recur this year?', icon: <RotateCcw className="w-4 h-4" /> },
+  { id: 'h17', category: 'HEALTH', tag: 'Cosmetic Risk?', question: 'Thinking of plastic surgery. Will it be disfiguring?', icon: <Smile className="w-4 h-4" /> },
+  { id: 'h18', category: 'HEALTH', tag: 'Body Anxiety?', question: 'Why can\'t I lose weight no matter what?', icon: <User className="w-4 h-4" /> },
+  { id: 'h19', category: 'HEALTH', tag: 'Immunity?', question: 'Catching colds often. How to boost immunity?', icon: <Shield className="w-4 h-4" /> },
+  { id: 'h20', category: 'HEALTH', tag: 'Occupational Disease?', question: 'Spine can\'t take it anymore. Should I switch jobs to recover?', icon: <Armchair className="w-4 h-4" /> },
 ];
 
 const decisionItems: FeedItem[] = [
-  { id: 'd1', category: 'DECISION', tag: '跳槽还是苟住?', question: '2026年适合跳槽、谈加薪或启动新项目吗？还是应该“苟”在现在的岗位上？', icon: <Briefcase className="w-4 h-4" /> },
-  { id: 'd2', category: 'DECISION', tag: '买房时机?', question: '下个月我能不能做重大决定，比如买房、投资或裸辞？', icon: <Home className="w-4 h-4" /> },
-  { id: 'd3', category: 'DECISION', tag: '出国留学?', question: '现在出国是镀金还是浪费钱？', icon: <Plane className="w-4 h-4" /> },
-  { id: 'd4', category: 'DECISION', tag: '移民签证?', question: '我的移民申请今年能批下来吗？', icon: <Globe className="w-4 h-4" /> },
-  { id: 'd5', category: 'DECISION', tag: '裸辞创业?', question: '受够了打工，今年适合裸辞创业吗？', icon: <Rocket className="w-4 h-4" /> },
-  { id: 'd6', category: 'DECISION', tag: '回老家发展?', question: '大城市太卷，回老家是不是躺平？', icon: <MapPin className="w-4 h-4" /> },
-  { id: 'd7', category: 'DECISION', tag: '考公上岸?', question: '我有考公务员的命吗？', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'd8', category: 'DECISION', tag: '读博还是工作?', question: '继续深造还是早点赚钱？', icon: <GraduationCap className="w-4 h-4" /> },
-  { id: 'd9', category: 'DECISION', tag: '买车?', question: '今年适合买车吗？还是留着现金？', icon: <Car className="w-4 h-4" /> },
-  { id: 'd10', category: 'DECISION', tag: '生孩子?', question: '今年适合备孕生孩子吗？', icon: <Baby className="w-4 h-4" /> },
-  { id: 'd11', category: 'DECISION', tag: '离婚?', question: '这段婚姻太痛苦，今年离婚顺利吗？', icon: <FileMinus className="w-4 h-4" /> },
-  { id: 'd12', category: 'DECISION', tag: '退休计划?', question: '能不能提前退休，环游世界？', icon: <Palmtree className="w-4 h-4" /> },
-  { id: 'd13', category: 'DECISION', tag: '转行?', question: '现在的行业没前途，转行穷三年？', icon: <RefreshCw className="w-4 h-4" /> },
-  { id: 'd14', category: 'DECISION', tag: '借钱给朋友?', question: '朋友借钱救急，该不该借？', icon: <HelpingHand className="w-4 h-4" /> },
-  { id: 'd15', category: 'DECISION', tag: '投资自己?', question: '花大钱报课提升自己，值得吗？', icon: <ArrowUpCircle className="w-4 h-4" /> },
-  { id: 'd16', category: 'DECISION', tag: '签署合同?', question: '这份合同有没有法律陷阱？', icon: <FileSignature className="w-4 h-4" /> },
-  { id: 'd17', category: 'DECISION', tag: '法律诉讼?', question: '官司能不能打赢？', icon: <Gavel className="w-4 h-4" /> },
-  { id: 'd18', category: 'DECISION', tag: '搬家方位?', question: '往哪个方向搬家运势最好？', icon: <Compass className="w-4 h-4" /> },
-  { id: 'd19', category: 'DECISION', tag: '该不该躺平?', question: '努力没结果，是不是该认命躺平？', icon: <BedDouble className="w-4 h-4" /> },
-  { id: 'd20', category: 'DECISION', tag: '人生重启?', question: '感觉人生失败，还有翻盘的机会吗？', icon: <RefreshCcw className="w-4 h-4" /> },
+  { id: 'd1', category: 'DECISION', tag: 'Jump or Stay?', question: 'Is 2026 suitable for changing jobs, raises, or new projects? Or should I "hunker down"?', icon: <Briefcase className="w-4 h-4" /> },
+  { id: 'd2', category: 'DECISION', tag: 'Buy House?', question: 'Can I make a major decision next month, like buying a house or quitting?', icon: <Home className="w-4 h-4" /> },
+  { id: 'd3', category: 'DECISION', tag: 'Study Abroad?', question: 'Is going abroad now gold-plating or wasting money?', icon: <Plane className="w-4 h-4" /> },
+  { id: 'd4', category: 'DECISION', tag: 'Immigration?', question: 'Will my immigration application be approved this year?', icon: <Globe className="w-4 h-4" /> },
+  { id: 'd5', category: 'DECISION', tag: 'Quit to Startup?', question: 'Fed up with working for others. Is this year right for a startup?', icon: <Rocket className="w-4 h-4" /> },
+  { id: 'd6', category: 'DECISION', tag: 'Return Home?', question: 'Big city is too competitive. Is going back home "giving up"?', icon: <MapPin className="w-4 h-4" /> },
+  { id: 'd7', category: 'DECISION', tag: 'Civil Service?', question: 'Do I have the destiny to be a civil servant?', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'd8', category: 'DECISION', tag: 'PhD or Work?', question: 'Continue studying or start earning early?', icon: <GraduationCap className="w-4 h-4" /> },
+  { id: 'd9', category: 'DECISION', tag: 'Buy Car?', question: 'Is this year suitable for buying a car? Or keep the cash?', icon: <Car className="w-4 h-4" /> },
+  { id: 'd10', category: 'DECISION', tag: 'Have Baby?', question: 'Is this year suitable for pregnancy?', icon: <Baby className="w-4 h-4" /> },
+  { id: 'd11', category: 'DECISION', tag: 'Divorce?', question: 'This marriage is painful. Will divorce go smoothly this year?', icon: <FileMinus className="w-4 h-4" /> },
+  { id: 'd12', category: 'DECISION', tag: 'Retire Early?', question: 'Can I retire early and travel the world?', icon: <Palmtree className="w-4 h-4" /> },
+  { id: 'd13', category: 'DECISION', tag: 'Change Industry?', question: 'No future in current industry. Will switching make me poor for 3 years?', icon: <RefreshCw className="w-4 h-4" /> },
+  { id: 'd14', category: 'DECISION', tag: 'Lend Money?', question: 'Friend needs emergency money. Should I lend it?', icon: <HelpingHand className="w-4 h-4" /> },
+  { id: 'd15', category: 'DECISION', tag: 'Self Investment?', question: 'Spending big on courses to improve myself. Worth it?', icon: <ArrowUpCircle className="w-4 h-4" /> },
+  { id: 'd16', category: 'DECISION', tag: 'Sign Contract?', question: 'Are there legal traps in this contract?', icon: <FileSignature className="w-4 h-4" /> },
+  { id: 'd17', category: 'DECISION', tag: 'Legal Suit?', question: 'Can I win this lawsuit?', icon: <Gavel className="w-4 h-4" /> },
+  { id: 'd18', category: 'DECISION', tag: 'Moving Direction?', question: 'Which direction is best for moving?', icon: <Compass className="w-4 h-4" /> },
+  { id: 'd19', category: 'DECISION', tag: 'Lie Flat?', question: 'Effort yields no results. Should I just accept fate and lie flat?', icon: <BedDouble className="w-4 h-4" /> },
+  { id: 'd20', category: 'DECISION', tag: 'Life Reset?', question: 'Feel like a failure. Is there a chance to turn it around?', icon: <RefreshCcw className="w-4 h-4" /> },
 ];
 
 const TagBubble: React.FC<{ item: FeedItem; onClick: (item: FeedItem) => void }> = ({ item, onClick }) => (
@@ -165,11 +165,11 @@ const AnxietyFeed: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 mb-16 text-center">
           
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-zen-text dark:text-zen-subtle mb-6 tracking-tight">
-            这是否是你正经历的困扰？
+            Is This The Anxiety You Are Facing?
           </h2>
           
           <p className="font-sans text-lg text-zen-text/80 dark:text-zen-subtle/80 max-w-2xl mx-auto leading-relaxed">
-            这不是巧合。数万个体的共同焦虑，实际上是 2026 丙午流年火燥能量对现代社会结构的系统性冲击。
+            It's not a coincidence. The shared anxiety of thousands is actually a systemic impact of the 2026 Bing Wu Fire energy on modern social structures.
           </p>
       </div>
 
@@ -178,16 +178,16 @@ const AnxietyFeed: React.FC = () => {
           
           <div className="max-w-7xl mx-auto h-full grid grid-cols-2 md:grid-cols-4 gap-px bg-zen-text/5 px-0 md:px-4 relative z-0">
               <div className="bg-[#F0EDE6] dark:bg-[#0F1219] h-full px-2">
-                <VerticalColumn title="WEALTH / 财富" items={wealthItems} onSelect={setSelectedItem} />
+                <VerticalColumn title="WEALTH" items={wealthItems} onSelect={setSelectedItem} />
               </div>
               <div className="bg-[#F0EDE6] dark:bg-[#0F1219] h-full px-2">
-                <VerticalColumn title="LOVE / 感情" items={loveItems} reverse onSelect={setSelectedItem} />
+                <VerticalColumn title="LOVE" items={loveItems} reverse onSelect={setSelectedItem} />
               </div>
               <div className="bg-[#F0EDE6] dark:bg-[#0F1219] h-full px-2">
-                <VerticalColumn title="HEALTH / 健康" items={healthItems} onSelect={setSelectedItem} />
+                <VerticalColumn title="HEALTH" items={healthItems} onSelect={setSelectedItem} />
               </div>
               <div className="bg-[#F0EDE6] dark:bg-[#0F1219] h-full px-2">
-                <VerticalColumn title="DECISION / 决定" items={decisionItems} reverse onSelect={setSelectedItem} />
+                <VerticalColumn title="DECISION" items={decisionItems} reverse onSelect={setSelectedItem} />
               </div>
           </div>
           
