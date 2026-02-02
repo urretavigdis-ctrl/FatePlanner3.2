@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { ChevronDown, Sparkles, Grid3X3, Activity, Moon, Layout, Zap, User, Star, Binary, ArrowLeft, CheckCircle, Home } from 'lucide-react';
+import { 
+  ChevronDown, Sparkles, Grid3X3, Activity, Moon, Layout, 
+  Zap, User, Star, Binary, ArrowLeft, CheckCircle, Home,
+  Fingerprint, Scale, ShieldAlert, Crown, Heart, Flame, Droplets
+} from 'lucide-react';
 import ReportInsights from './ReportInsights';
 
 interface FoundationProps {
@@ -99,7 +103,7 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
 
       <div className="max-w-2xl mx-auto px-4 mt-6 space-y-4 pb-12">
         
-        {/* 2. Accordion 1: The Pillar Matrix */}
+        {/* MODULE 1: THE PILLAR MATRIX */}
         <AccordionItem 
             isOpen={openSection === 0} 
             onToggle={() => toggleSection(0)}
@@ -133,147 +137,202 @@ const Foundation: React.FC<FoundationProps> = ({ onUnlock, onBack, onHome }) => 
                     {PILLAR_DATA.hidden.map((val, i) => (
                         <div key={i} className="p-2 text-xs text-zen-text/60 font-mono tracking-widest">{val}</div>
                     ))}
-                    
-                    {/* Nanyin */}
-                    <div className="p-2 text-[10px] font-mono text-zen-text/40 border-r border-zen-accent/10 flex items-center justify-center bg-zen-text/[0.02]">SOUND</div>
-                    {PILLAR_DATA.nanyin.map((val, i) => (
-                        <div key={i} className="p-2 text-xs text-zen-text/60 bg-zen-text/[0.02]">{val}</div>
-                    ))}
-
-                    {/* Shensha */}
-                    <div className="p-2 text-[10px] font-mono text-zen-text/40 border-r border-zen-accent/10 flex items-center justify-center">STAR</div>
-                    {PILLAR_DATA.shensha.map((val, i) => (
-                        <div key={i} className="p-2 text-xs text-zen-accent">{val}</div>
-                    ))}
+                </div>
+                
+                {/* Cantian AI Insight */}
+                <div className="mt-4 p-4 bg-zen-text/5 rounded-lg border-l-2 border-zen-accent flex gap-3">
+                    <Activity className="w-5 h-5 text-zen-accent shrink-0 mt-0.5" />
+                    <div>
+                        <span className="text-[10px] font-mono text-zen-accent font-bold uppercase tracking-wider block mb-1">Cantian AI Analysis</span>
+                        <p className="text-sm font-serif italic text-zen-text/70 leading-relaxed">
+                            "This is your source code. You are a <span className="font-bold text-zen-text">Yang Earth (Wu)</span> Day Master born in the season of Fire. Think of a mineral-rich mountain scorching under the summer sun—immense potential, but currently overheating."
+                        </p>
+                    </div>
                 </div>
             </div>
         </AccordionItem>
 
-        {/* 3. Accordion 2: Structure & Talent */}
+        {/* MODULE 2: SOUL ARCHETYPE */}
         <AccordionItem 
             isOpen={openSection === 1} 
             onToggle={() => toggleSection(1)}
-            icon={<Layout className="w-5 h-5" />}
-            title="STRUCTURE & TALENT"
-            subtitle="HIDDEN POTENTIAL"
+            icon={<Fingerprint className="w-5 h-5" />}
+            title="SOUL ARCHETYPE"
+            subtitle="DAY MASTER ANALYSIS"
         >
             <div className="space-y-4">
-                <div className="flex justify-between items-center bg-white border border-zen-accent/20 p-4 rounded-xl shadow-sm">
+                <div className="flex justify-between items-center bg-white border border-zen-accent/20 p-5 rounded-xl shadow-sm">
                     <div>
-                        <span className="text-xs font-mono text-zen-text/40 uppercase block mb-1">Primary Structure</span>
-                        <h3 className="text-2xl font-serif font-bold text-zen-text">Thriving Structure</h3>
+                        <span className="text-xs font-mono text-zen-text/40 uppercase block mb-1">Archetype</span>
+                        <h3 className="text-2xl font-serif font-bold text-zen-text">The Sentient Mountain</h3>
+                        <span className="text-xs font-mono text-zen-accent mt-1 block">Yang Earth (Wu) · Stability</span>
                     </div>
-                    <button className="p-2 rounded-full bg-zen-accent/10 text-zen-accent hover:bg-zen-accent hover:text-white transition-colors">
-                        <Sparkles className="w-5 h-5" />
-                    </button>
+                    <div className="w-12 h-12 bg-zen-text rounded-full flex items-center justify-center text-white">
+                        <User className="w-6 h-6" />
+                    </div>
                 </div>
                 
-                <div className="flex flex-wrap gap-2">
-                    {['Flaming Structure', 'Wood-Fire Brilliance', 'Wealth Generation', 'Authority & Seal'].map(tag => (
-                        <span key={tag} className="px-3 py-1 bg-zen-text/5 text-zen-text/70 rounded-full text-xs font-serif border border-transparent hover:border-zen-accent/30 transition-colors">
+                <div className="grid grid-cols-2 gap-2">
+                    {['Trust Capital', 'Shock Absorber', 'Blind Spot: Inertia', 'Hidden Metal'].map(tag => (
+                        <div key={tag} className="px-3 py-2 bg-zen-text/5 text-center text-zen-text/70 rounded text-xs font-serif font-medium">
                             {tag}
-                        </span>
+                        </div>
                     ))}
                 </div>
 
-                <div className="bg-zen-text/5 p-4 rounded-lg border-l-2 border-zen-accent">
-                    <p className="text-sm text-zen-text/80 leading-relaxed font-sans">
-                        <span className="font-bold">AI Insight:</span> Your chart shows strong resource integration capabilities. The 'Thriving Structure' means you are suited to wield power within mature systems, rather than starting from zero. Your core task in 2026 is to convert 'Reputation' into 'Tangible Assets'.
+                <div className="p-4 rounded-lg bg-white/50 border border-zen-text/5 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-zen-accent/30" />
+                    <p className="text-sm text-zen-text/80 leading-relaxed font-sans text-justify pl-2">
+                        "Your core essence is <span className="font-bold">Stability amidst Chaos</span>. While others panic in 2026's volatility, you naturally absorb shockwaves, providing a grounding force. Your major strength is <span className="font-bold">Trust Capital</span>—people instinctively rely on your immovability. However, your psychological blind spot is <span className="font-bold text-zen-risk">Sedimentary Stagnation</span>. Like a mountain refusing to shift, you often mistake 'endurance' for 'inaction', holding onto expiring contexts simply because they are familiar. To unlock your hidden treasures, you must allow internal pressure to crack your surface."
                     </p>
                 </div>
             </div>
         </AccordionItem>
 
-        {/* 4. Accordion 3: Elemental Audit */}
+        {/* MODULE 3: HIDDEN POTENTIAL */}
         <AccordionItem 
             isOpen={openSection === 2} 
             onToggle={() => toggleSection(2)}
-            icon={<Activity className="w-5 h-5" />}
-            title="ELEMENTAL AUDIT"
-            subtitle="DISTRIBUTION & FLOW"
+            icon={<Sparkles className="w-5 h-5" />}
+            title="HIDDEN POTENTIAL"
+            subtitle="SHEN SHA & GIFTS"
         >
-            <div className="space-y-6 pt-2">
-                <div className="flex items-end justify-between h-32 px-2 gap-2">
-                    {[
-                        { label: 'Wood', pct: 20, color: ELEMENT_COLORS.Wood },
-                        { label: 'Fire', pct: 45, color: ELEMENT_COLORS.Fire },
-                        { label: 'Earth', pct: 15, color: ELEMENT_COLORS.Earth },
-                        { label: 'Metal', pct: 10, color: ELEMENT_COLORS.Gold },
-                        { label: 'Water', pct: 10, color: ELEMENT_COLORS.Water },
-                    ].map((el) => (
-                        <div key={el.label} className="flex flex-col items-center justify-end h-full w-full group">
-                            <span className="text-[10px] font-mono text-zen-text/40 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">{el.pct}%</span>
-                            <div className="w-full bg-zen-text/5 rounded-t-sm relative overflow-hidden h-full">
-                                <div 
-                                    className="absolute bottom-0 left-0 w-full transition-all duration-1000 ease-out"
-                                    style={{ 
-                                        height: `${openSection === 2 ? el.pct : 0}%`, 
-                                        backgroundColor: el.color 
-                                    }} 
-                                />
-                            </div>
-                            <span className="text-[10px] font-mono text-zen-text/60 mt-2">{el.label}</span>
-                        </div>
-                    ))}
-                </div>
-                <p className="text-xs text-zen-text/60 text-center italic">
-                    "Fire is dominant (45%). This indicates a passionate, reactive, and highly expressive personality type."
+            <div className="space-y-3 pt-2">
+                <p className="text-xs text-zen-text/40 font-mono uppercase tracking-widest mb-2 text-center">
+                    Active Symbolic Weaponry
                 </p>
+
+                {/* Star 1 */}
+                <div className="flex items-start gap-4 p-3 rounded-lg bg-white border border-zen-text/5 shadow-sm hover:border-zen-accent/20 transition-colors">
+                    <div className="p-2 bg-[#C19A6B]/10 text-[#C19A6B] rounded-full shrink-0">
+                        <Crown className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <h4 className="font-serif font-bold text-zen-text text-sm">The Executive Protocol <span className="text-[10px] font-mono text-zen-text/40 font-normal ml-1">(General Star)</span></h4>
+                        <p className="text-xs text-zen-text/70 leading-relaxed mt-1">
+                            Not just authority, but the ability to enforce order. In daily life, this manifests as a natural talent for crisis containment. When chaos erupts, you hold the remote control.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Star 2 */}
+                <div className="flex items-start gap-4 p-3 rounded-lg bg-white border border-zen-text/5 shadow-sm hover:border-zen-accent/20 transition-colors">
+                    <div className="p-2 bg-[#C56E61]/10 text-[#C56E61] rounded-full shrink-0">
+                        <Heart className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <h4 className="font-serif font-bold text-zen-text text-sm">The Magnetic Field <span className="text-[10px] font-mono text-zen-text/40 font-normal ml-1">(Red Chamber)</span></h4>
+                        <p className="text-xs text-zen-text/70 leading-relaxed mt-1">
+                            A specific charisma that disarms defenses. It gives you an unfair advantage in negotiations—people subconsciously want to agree with you before you present the data.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Star 3 */}
+                <div className="flex items-start gap-4 p-3 rounded-lg bg-white border border-zen-text/5 shadow-sm hover:border-zen-accent/20 transition-colors">
+                    <div className="p-2 bg-[#6B8BA4]/10 text-[#6B8BA4] rounded-full shrink-0">
+                        <Binary className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <h4 className="font-serif font-bold text-zen-text text-sm">The Pattern Decoder <span className="text-[10px] font-mono text-zen-text/40 font-normal ml-1">(Taiji Noble)</span></h4>
+                        <p className="text-xs text-zen-text/70 leading-relaxed mt-1">
+                            A high-frequency antenna for metaphysical trends. You often 'know' the market direction before the charts confirm it. This is your intuition operating faster than logic.
+                        </p>
+                    </div>
+                </div>
             </div>
         </AccordionItem>
 
-        {/* 5. Accordion 4: Yin-Yang Balance */}
+        {/* MODULE 4: ENERGY EQUILIBRIUM */}
         <AccordionItem 
             isOpen={openSection === 3} 
             onToggle={() => toggleSection(3)}
-            icon={<Binary className="w-5 h-5" />}
-            title="YIN-YANG BALANCE"
-            subtitle="CORE OF THE CHART"
+            icon={<Scale className="w-5 h-5" />}
+            title="ENERGY EQUILIBRIUM"
+            subtitle="ELEMENTAL BALANCE"
         >
-            <div className="flex items-center gap-6 py-2">
-                <div className="relative w-24 h-24 flex-shrink-0">
-                   {/* CSS Yin Yang */}
-                   <div className="w-full h-full rounded-full border border-zen-text/10 bg-white relative overflow-hidden flex items-center justify-center">
-                        <div className="absolute top-0 bottom-0 left-0 right-1/2 bg-zen-text" />
-                        <div className="absolute top-0 left-1/2 w-12 h-12 bg-zen-text rounded-full flex items-center justify-center -translate-x-1/2">
-                            <div className="w-3 h-3 bg-white rounded-full" />
+             <div className="space-y-6 pt-2">
+                {/* Yin Yang */}
+                <div className="flex items-center gap-4 bg-white/50 p-3 rounded-xl border border-zen-text/5">
+                    <div className="relative w-12 h-12 flex-shrink-0 opacity-80">
+                        <div className="w-full h-full rounded-full border border-zen-text/10 bg-white relative overflow-hidden flex items-center justify-center">
+                            <div className="absolute top-0 bottom-0 left-0 right-1/2 bg-zen-text" />
+                            <div className="absolute top-0 left-1/2 w-6 h-6 bg-zen-text rounded-full flex items-center justify-center -translate-x-1/2">
+                                <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                            </div>
+                            <div className="absolute bottom-0 left-1/2 w-6 h-6 bg-white rounded-full flex items-center justify-center -translate-x-1/2">
+                                <div className="w-1.5 h-1.5 bg-zen-text rounded-full" />
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center -translate-x-1/2">
-                            <div className="w-3 h-3 bg-zen-text rounded-full" />
-                        </div>
-                   </div>
+                    </div>
+                    <div>
+                        <h4 className="text-xs font-bold text-zen-text uppercase tracking-wide">Yin-Yang State</h4>
+                        <p className="text-xs text-zen-text/70 mt-1">
+                            Balanced, leaning Yang. Active in public, but you crave solitude to recharge.
+                        </p>
+                    </div>
                 </div>
-                <div className="space-y-2">
-                    <h4 className="font-serif font-bold text-zen-text">Balanced, leaning Yang.</h4>
-                    <p className="text-xs text-zen-text/70 leading-relaxed">
-                        Your personality shows "Cold inside, Hot outside" traits. You are active in public (Yang) but desperately need solitude to recharge in private (Yin).
-                    </p>
+
+                {/* Elemental Bars */}
+                <div className="space-y-3">
+                     {[
+                        { label: 'Fire (Passion)', pct: 45, color: ELEMENT_COLORS.Fire },
+                        { label: 'Wood (Growth)', pct: 20, color: ELEMENT_COLORS.Wood },
+                        { label: 'Earth (Self)', pct: 15, color: ELEMENT_COLORS.Earth },
+                        { label: 'Water (Wisdom)', pct: 10, color: ELEMENT_COLORS.Water },
+                        { label: 'Metal (Output)', pct: 10, color: ELEMENT_COLORS.Gold },
+                    ].map((el) => (
+                        <div key={el.label} className="flex items-center gap-3">
+                            <span className="text-[10px] font-mono text-zen-text/50 w-24 text-right uppercase">{el.label}</span>
+                            <div className="flex-1 h-2 bg-zen-text/5 rounded-full overflow-hidden">
+                                <div 
+                                    className="h-full rounded-full"
+                                    style={{ width: `${el.pct}%`, backgroundColor: el.color }} 
+                                />
+                            </div>
+                            <span className="text-[10px] font-mono text-zen-text/60 w-8">{el.pct}%</span>
+                        </div>
+                    ))}
+                </div>
+                
+                {/* Environmental Affinity Summary */}
+                <div className="bg-zen-text/5 p-3 rounded-lg border border-zen-text/10 flex items-start gap-3">
+                    <div className="p-1 bg-[#6B8BA4]/20 rounded-full text-[#6B8BA4] mt-0.5">
+                        <Droplets className="w-3 h-3" />
+                    </div>
+                    <div>
+                        <span className="text-[10px] font-mono font-bold text-zen-text/40 uppercase tracking-widest block mb-1">Environmental Affinity</span>
+                        <p className="text-xs text-zen-text/80 italic font-serif leading-relaxed">
+                            "Your chart is scorching (45% Fire) and dry; you urgently seek the <span className="font-bold text-[#6B8BA4]">Hydration of Deep Water</span> (North, Sleep, Wisdom) to prevent your mental engine from seizing up."
+                        </p>
+                    </div>
                 </div>
             </div>
         </AccordionItem>
 
-        {/* 6. Accordion 5: Zodiac Archetype */}
-        <AccordionItem 
-            isOpen={openSection === 4} 
-            onToggle={() => toggleSection(4)}
-            icon={<Star className="w-5 h-5" />}
-            title="ZODIAC ARCHETYPE"
-            subtitle="DEEP SELF"
-        >
-            <div className="grid grid-cols-2 gap-3">
-                {[
-                    { label: 'Archetype', val: 'Rational Strategist' },
-                    { label: 'Key Trait', val: 'Mysterious Elegance' },
-                    { label: 'Shadow', val: 'Possessive Control' },
-                    { label: '2026 Theme', val: 'Shedding Skin' },
-                ].map((item) => (
-                    <div key={item.label} className="bg-white/50 border border-zen-accent/10 p-3 rounded">
-                        <span className="text-[10px] font-mono text-zen-text/40 uppercase block mb-1">{item.label}</span>
-                        <span className="text-sm font-serif text-zen-text font-medium">{item.val}</span>
+        {/* 2026 RISK SIGNAL HOOK */}
+        <div className="mt-8 relative overflow-hidden rounded-xl border border-zen-risk/30 bg-zen-risk/5 p-6 animate-pulse-slow">
+            <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-zen-risk/10 text-zen-risk shrink-0">
+                    <ShieldAlert className="w-6 h-6" />
+                </div>
+                <div>
+                    <h3 className="text-lg font-serif font-bold text-zen-risk mb-2">2026 RISK SIGNAL DETECTED</h3>
+                    <p className="text-sm text-zen-text/80 leading-relaxed font-sans mb-4">
+                        <span className="font-bold">System Warning:</span> Your chart's Fire element (45%) is already critical. 
+                        The incoming 2026 "Fire Horse" energy will trigger a massive <span className="font-bold text-zen-risk">Super-Saturation Event</span>.
+                        The volcano is active. Risk of inflammatory health issues and impulsive financial decisions is high.
+                    </p>
+                    <div className="flex items-center gap-2">
+                        <Flame className="w-4 h-4 text-zen-risk fill-zen-risk" />
+                        <span className="text-xs text-zen-text/60 font-mono uppercase tracking-wider">
+                            Risk Probability: <span className="text-zen-risk font-bold">94.2% [High Volatility]</span>
+                        </span>
                     </div>
-                ))}
+                </div>
             </div>
-        </AccordionItem>
+        </div>
+
       </div>
 
       {/* --- PAID SECTION: REPORT INSIGHTS --- */}
